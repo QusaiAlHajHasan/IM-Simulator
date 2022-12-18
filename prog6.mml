@@ -1,0 +1,17 @@
+00100 03000000   Reg0 = 0 (Sum)
+00101 03100005   Reg1 = 5 (Counter)
+00102 03200001   Reg2 = 1
+00103 03300200   Reg3 = 200 (First index of vector)
+00104 04400003   Reg4 = mem[Reg3] (indexed value of vector)
+00105 06100002   Reg1 = Reg1 - Reg2 (Decrement the counter)
+00106 05300002   Reg3 = Reg3 + Reg2 (move to next element in vector)
+00107 05000004   Reg0 = Reg0 + Reg4 (Add indexed value in vector to sum)
+00108 0B10010A   Jump to address 0010A if Reg1 = 0
+00109 0A000104   Jump to address 00104
+0010A 00000000   Halt
+
+00200 0000000F   Vector
+00201 00000012
+00202 00000005
+00203 0000000E
+00204 0000001A

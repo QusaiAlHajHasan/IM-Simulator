@@ -1,0 +1,28 @@
+00100 03000000   Reg0 = 0 (Sum)
+00101 03500001   Reg5 = 1
+00102 03600005   Reg6 = 5 (Counter)
+00103 03700200   Reg7 = 200 (First index of vector A)
+00104 03800300   Reg8 = 300 (First index of vector B)
+00105 04100007   Reg1 = mem[Reg7] (indexed value of vector A)
+00106 04200008   Reg2 = mem[Reg8] (indexed value of vector B)
+00107 06600005   Reg6 = Reg6 - Reg5 (Decrement the counter)
+00108 07100002   Reg1 = Reg1 x Reg2 (Multiply indexed elements in each vector)
+00109 05000001   Reg0 = Reg0 + Reg1 (Add result value of multiplication to sum)
+0010A 05700005   Reg7 = Reg7 + Reg5 (move to next element in vector A)
+0010B 05800005   Reg8 = Reg8 + Reg5 (move to next element in vector B)
+0010C 0B60010E   jump to address 10E if Reg6 = 0
+0010D 0A000105   jump to address 105
+0010E 00000000   Halt
+
+00200 00000012   Vector A
+00201 0000000E 
+00202 0000000C 
+00203 00000010 
+00204 000000FF 
+
+00300 00000015   Vector B
+00301 00000030 
+00302 0000000A 
+00303 0000000B 
+00304 0000000D 
+
